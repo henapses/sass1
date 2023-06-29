@@ -1,0 +1,93 @@
+.contact {
+  margin-top: 20px;
+  background: white;
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  .contact-container-left {
+    display: flex;
+    flex-direction: column;
+
+    padding: 30px;
+    position: relative;
+    border-right: 1px solid $grey;
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: none;
+    }
+    .submit-container {
+      text-align: left;
+    }
+
+    input[type="submit"],
+    select {
+      background: none;
+      border: 2px solid $color1;
+      width: 170px;
+      height: 45px;
+      margin: 50px 0;
+    }
+    label {
+      text-transform: uppercase;
+      @include title;
+      font-size: 0.6rem;
+      text-align: left;
+      padding: 10px 20px;
+    }
+  }
+
+  .contact-container-right {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+
+    div {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      align-items: center;
+      border-bottom: 1px solid $grey;
+    }
+    h3 {
+      @include title;
+      font-size: 0.5rem;
+      color: gray;
+      padding-left: 40px;
+      text-align: left;
+    }
+    p {
+      font-size: 0.7rem;
+      line-height: 26px;
+      font-style: normal;
+    }
+  }
+  .Social {
+    li {
+      border: 1px solid $grey;
+      border-radius: 150px;
+      height: 40px;
+      width: 40px;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 12px;
+    }
+  }
+}

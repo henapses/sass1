@@ -1,0 +1,102 @@
+header {
+  color: $color2;
+  width: 80%;
+  margin: auto;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .header-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .arrow {
+      font-size: 5em;
+    }
+  }
+
+  h1 {
+    @include title;
+    font-size: 4rem;
+    letter-spacing: 6px;
+  }
+
+  p {
+    margin: 40px auto 60px;
+    font-style: italic;
+    width: 85%;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(232, 231, 231, 0.244);
+    color: white;
+    z-index: 100;
+    height: 85px;
+
+    span {
+      font-size: 1.2rem;
+      border: 1px solid white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-left {
+    &:hover li:not(:hover) {
+      background: none;
+      color: white;
+    }
+    li {
+      @include title;
+      font-size: 0.7rem;
+      padding: 0 15px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      &:first-child {
+        background: white;
+        color: black;
+      }
+      &:hover {
+        background: white;
+        color: black;
+      }
+    }
+  }
+
+  .nav-right {
+    font-size: 1.1rem;
+    min-width: 100px;
+    width: 25%;
+    max-width: 300px;
+    justify-content: space-around;
+    margin-right: 10px;
+
+    li {
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

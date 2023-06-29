@@ -1,0 +1,64 @@
+$color1: black;
+$color2: rgb(255, 255, 255);
+$grey: rgb(229, 228, 228);
+
+$font1: Inter-bold, sans-serif;
+$font2: MerriweatherLight, serif;
+
+@mixin title {
+  font-family: $font1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+* {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url(../images/bg.jpg) fixed center/cover;
+  text-align: center;
+
+  margin: auto;
+  max-width: 1300px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    animation: animbefore 1.5s ease forwards;
+    animation-delay: 0.15s;
+
+    @keyframes animbefore {
+      to {
+        opacity: 0;
+      }
+    }
+  }
+}
+img {
+  width: 100%;
+}
+
+.btn {
+  background: none;
+  border: 2px solid $color1;
+  width: 170px;
+  height: 45px;
+  margin: 50px 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}

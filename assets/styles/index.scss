@@ -1,0 +1,13 @@
+@import "./layouts/settings";
+@import "./layouts/header";
+@import "./layouts/main";
+@import "./layouts/footer";
+
+@font-face {
+  font-family: "Inter-bold";
+  src: url(../fonts/Inter-VariableFont_slntwght.ttf);
+}
+@font-face {
+  font-family: "MerriweatherLight";
+  src: url(./fonts/Merriweather-Light.ttf);
+}
